@@ -46,3 +46,21 @@ Special thanks to everyone behind these awesome projects, without them, none of 
 - [CompVis/stable-diffusion](https://github.com/CompVis/stable-diffusion)
 - [Sygil-webui](https://github.com/Sygil-Dev/sygil-webui)
 - and many many more.
+
+
+# Build issues
+- Comfy built out of the box
+- Auto
+    - Failing at the `apt` step
+    - Re-ran and succeeded
+    - Initial usage had an error (Method not implemented when generating). Removed the container, started up again, fixed. IDK.
+- Invoke
+    - Failing at the `apt` step
+    - Re-ran and succeeded
+
+## Possible buildkit workaround
+- Don't seem to have needed this, but useful
+- In a Powershell terminal: `$env:DOCKER_BUILDKIT = 0`
+
+# Setup
+- Downloaded: https://huggingface.co/stabilityai/sdxl-turbo/blob/main/sd_xl_turbo_1.0_fp16.safetensors Put in stable-diffusion-webui-docker\data\models\Stable-diffusion

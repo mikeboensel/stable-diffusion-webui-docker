@@ -28,6 +28,8 @@ services:
     profiles: ["auto"]
     build: ./services/AUTOMATIC1111
     image: sd-auto:78
+    ports:
+      - "${WEBUI_PORT:-7861}:7860"
     environment:
       - CLI_ARGS=--allow-code --medvram --xformers --enable-insecure-extension-access --api
 
